@@ -1,3 +1,5 @@
+Auteur : Matthieu Ramond - M1 MIAGE Classique
+
 # TP1
 
 1. **Décrire les étapes d'installation de Apache NIFI, les prérequis et les rôles de chacun des répertoires générés dans l'installation nifi**
@@ -48,15 +50,15 @@
 
 6.  **insérer les enregistrements de votre json dans la table de la base de données**
    
-   On configure la connexion à la base de donnée :
+    On configure la connexion à la base de donnée :
 
-   ![alt text](images/TP1-2.png)
-   
-   Qu'on peut ensuite utiliser dans les processors ConvertJSONToSQL et PutSQL
-   
-   ![alt text](images/TP1-3.png)
+    ![alt text](images/TP1-2.png)
+    
+    Qu'on peut ensuite utiliser dans les processors ConvertJSONToSQL et PutSQL
+    
+    ![alt text](images/TP1-3.png)
 
-   Process Group final :
+    Process Group final :
 
-   ![alt text](images/TP1-4.png)
+    ![alt text](images/TP1-4.png)
 

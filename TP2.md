@@ -1,3 +1,5 @@
+Auteur : Matthieu Ramond - M1 MIAGE Classique
+
 # TP2
 
 ## BROKER
