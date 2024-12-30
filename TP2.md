@@ -157,7 +157,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
     Commande :
     ```bash
-    bin/kafka-console-consumer.sh --topic TP_MIAGE_4 --group miage_group --bootstrap-server localhost:9092
+    bin/kafka-topics.sh --create --topic TP_MIAGE_4 --partitions 3 --bootstrap-server localhost:9092
     ```
     Résulat
     ```bash
