@@ -4,7 +4,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
 ## HDFS
 
-1. Dans HDFS, créer en lignes de commande HDFS (hdfs dfs -??????) l'arborescence suivante ``/data/common/raw/NOM_DATABASE_POSTGRES/NOM_TABLE_POST``
+1. **Dans HDFS, créer en lignes de commande HDFS (hdfs dfs -??????) l'arborescence suivante** ``/data/common/raw/NOM_DATABASE_POSTGRES/NOM_TABLE_POST``
 
     Commande :
     ```bash
@@ -13,14 +13,14 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     Résultat : Ne renvoie rien 
 
 
-2. En lignes de commande HDFS, Créer un fichier ``studentM1_1.csv`` dans ce répertoire (ayant 3 colonnes firstName, lastName,email, avec vos données)
+2. **En lignes de commande HDFS, Créer un fichier ``studentM1_1.csv`` dans ce répertoire (ayant 3 colonnes firstName, lastName,email, avec vos données)**
 
     ```bash
     hdfs dfs -put studentM1_1.csv /data/common/raw/NOM_DATABASE_POSTGRES/NOM_TABLE_POST/
     ```
     Résultat : Ne renvoie rien
 
-3. Afficher le contenu en lignes de commande HDFS du fichier
+3. **Afficher le contenu en lignes de commande HDFS du fichier**
 
     Commande :
     ```bash
@@ -37,21 +37,21 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
 ## HIVE
 
-1. Créer une base de données DATABASE_M1 (celle que vous avez créée dans postgres)
+1. **Créer une base de données DATABASE_M1 (celle que vous avez créée dans postgres)**
 
     Code HQL :
     ```SQL
     CREATE DATABASE DATABASE_M1;
     ```
 
-2. Avec HQL, créer une base de données DATABASE_M2
+2. **Avec HQL, créer une base de données DATABASE_M2**
 
     Code HQL :
     ```SQL
     CREATE DATABASE DATABASE_M2;
     ```
 
-3. Avec HQL, créer une table HIVE ETUDIANT_M1 dans la base de donnée DATABASE_M1 pointant sur le répertoire `data/common/raw/DATABASE_M1/ETUDIANT_M1`
+3. **Avec HQL, créer une table HIVE ETUDIANT_M1 dans la base de donnée DATABASE_M1 pointant sur le répertoire `data/common/raw/DATABASE_M1/ETUDIANT_M1`**
 
     Code HQL :
     ```SQL
@@ -66,7 +66,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     LOCATION '/data/common/raw/DATABASE_M1/ETUDIANT_M1';
     ```
 
-4. Avec HQL, Afficher le contenu de la table ETUDIANT_M1
+4. **Avec HQL, Afficher le contenu de la table ETUDIANT_M1**
 
     Code HQL :
     ```SQL
@@ -74,7 +74,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     ```
     Résultat : Ne renvoie rien (car table vide)
 
-5. Avec HQL, Créer une table ETUDIANT_M1_PART dans la base de donnée DATABASE_M1 partitionnée sur le champ DateRecep (au format année mois, jour, heure, minute : AAAAMMJJHHmm) et pointant vers le répertoire /common/raw/DATABASE_M1/ETUDIANT_M1_PART
+5. **Avec HQL, Créer une table ETUDIANT_M1_PART dans la base de donnée DATABASE_M1 partitionnée sur le champ DateRecep (au format année mois, jour, heure, minute : AAAAMMJJHHmm) et pointant vers le répertoire /common/raw/DATABASE_M1/ETUDIANT_M1_PART**
 
     Code HQL :
     ```SQL
@@ -88,7 +88,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     LOCATION '/common/raw/DATABASE_M1/ETUDIANT_M1_PART';
     ```
 
-6. Créer une table externe ETUDIANT_M2 dans la base de donnée DATABASE_M2
+6. **Créer une table externe ETUDIANT_M2 dans la base de donnée DATABASE_M2**
 
     On suit le même schéma que pour la table ETUDIANT_M1.
 
@@ -106,7 +106,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     ```
 
 ## NIFI
-1. Dupliquer le TP2 en TP3
+1. **Dupliquer le TP2 en TP3**
 
     J'ai donc dupliqué le process group TP2-B, le process group dédié à la réception des données via Kafka et au stockage dans la base de données sql.
 
@@ -122,14 +122,14 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     
 
 
-3. Créer la base de donnée HIVE ``dsid``
+3. **Créer la base de donnée HIVE ``dsid``**
 
     Code HQL :
     ```SQL
     CREATE DATABASE dsid;
     ```
 
-4. Créer la table externe `dsid_m_departements` dans la base de donnée HIVE ``dsid`` et qui pointe vers le repertoire HDFS ``/common/raw/dsid/dsid_m_departements``
+4. **Créer la table externe `dsid_m_departements` dans la base de donnée HIVE ``dsid`` et qui pointe vers le repertoire HDFS ``/common/raw/dsid/dsid_m_departements``**
 
     Code HQL :
     ```SQL
@@ -145,7 +145,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
     LOCATION '/common/raw/dsid/dsid_m_departements';
     ```
 
-5. En utilisant le processesor putHdfs, déposer les données récupérées depuis KAFKA dans le répertoire HDFS ``/common/raw/dsid/dsid_m_departements/DateRecep=20241017`` (20241017 est la date du jout et cette valeur doit être générée dynamiquement par nifi, (utiliser un attribut du flowfile avec une valeur date au format demandé ex : Variable_DateRecep avec la valeur DateRecep=${now():format('yyyyMMdd')}
+5. **En utilisant le processesor putHdfs, déposer les données récupérées depuis KAFKA dans le répertoire HDFS ``/common/raw/dsid/dsid_m_departements/DateRecep=20241017`` (20241017 est la date du jout et cette valeur doit être générée dynamiquement par nifi, (utiliser un attribut du flowfile avec une valeur date au format demandé ex : Variable_DateRecep avec la valeur DateRecep=${now():format('yyyyMMdd')}**
 
 
 
