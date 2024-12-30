@@ -117,7 +117,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
     Commande : 
     ```bash
-    hdfs dfs -mkdir -p /data/common/raw/dsid/dsid_m_departements
+    hdfs dfs -mkdir -p /common/raw/dsid/dsid_m_departements
     ```
     
 
@@ -147,7 +147,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
 5. En utilisant le processesor putHdfs, déposer les données récupérées depuis KAFKA dans le répertoire HDFS ``/common/raw/dsid/dsid_m_departements/DateRecep=20241017`` (20241017 est la date du jout et cette valeur doit être générée dynamiquement par nifi, (utiliser un attribut du flowfile avec une valeur date au format demandé ex : Variable_DateRecep avec la valeur DateRecep=${now():format('yyyyMMdd')}
 
-    (là je suis en train de bosser dessus) TODO : Mettre les screens
+
 
 6. Faire un select sur la table , qu'est ce que vous remarquez?
 7. Lancer la commande sql suivante Msck repair table NOM_DE_LA_DATABASE_POSTGRES.NOM_DE_LA_TABLE_POSTGRES;
