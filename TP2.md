@@ -244,3 +244,8 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
    ![alt text](images/TP2-4.png)
 
    ![alt text](images/TP2-5.png)
+
+
+    Les deux process groups :
+    ![alt text](images/TP2-6.png)
+
