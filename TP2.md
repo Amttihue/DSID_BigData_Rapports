@@ -2,7 +2,7 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
 [Index](./README.md)
 
-# TP2
+# TP2 - Apache Kafka
 
 ## BROKER
 1. **Télécharger et Installer Kafka sur un seul broker**

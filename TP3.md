@@ -2,6 +2,8 @@ Auteur : Matthieu Ramond - M1 MIAGE Classique
 
 [Index](./README.md)
 
+# TP3 - Apache Hive
+
 ## HDFS
 
 1. **Dans HDFS, créer en lignes de commande HDFS (hdfs dfs -??????) l'arborescence suivante** ``/data/common/raw/NOM_DATABASE_POSTGRES/NOM_TABLE_POST``
